@@ -1,6 +1,6 @@
 # Título del Proyecto
 
-Proyecto Zoologico para utilización de herencia y polimorfismo
+Proyecto Zoologico para utilización de herencia y polimorfismo.
 
 ## Comenzando 🚀
 
