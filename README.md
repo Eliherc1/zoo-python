@@ -1,4 +1,4 @@
-# Título del Proyecto
+# Zoologico (Herencia y Polimorfismo)
 
 Proyecto Zoologico para utilización de herencia y polimorfismo.
 
