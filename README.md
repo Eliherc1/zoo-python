@@ -1,14 +1,18 @@
-# Zoologico (Herencia y Polimorfismo)
+# Proyecto ZOO (Herencia y Polimorfismo)
 
 Proyecto Zoologico para utilización de herencia y polimorfismo.
 
-## Comenzando 🚀
+## Objetivos 🚀
 
-Archivo a ejecutar zoo.py, capeta clases: animal.py , camello.py , delfin.py , flamenco.py
+* Practicar la utilización de la herencia
+* Asociaciones entre clases.
+* Práctica métodos primordiales
+* Ver el polimorfismo en acción
 
+Archivo a ejecutar: zoo.py
+Clases: animal.py , camello.py , delfin.py , flamenco.py
 
-
-## Autores ✒️
+## Autor ✒️
 
 * **Elizabeth Hernandez C.** - *Trabajo Inicial* - [Eliherc1](https://github.com/Eliherc1)
 
