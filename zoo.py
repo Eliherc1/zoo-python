@@ -24,6 +24,10 @@ class Zoo:
     def get_animal(self,posicion):
         return self.animales[posicion]
 
+    def print_detail(self):
+        for a in range (len(self.animales)):
+            self.animales[a].display_info_detail()
+
     def __str__(self):
         return self.name
 
@@ -33,8 +37,8 @@ print("-"*30, "Bienvenido a ", zoo1, "-"*30)
 
 while True:
     numero = input(
-        "1: AGREGAR ANIMAL\n2: MOSTRAR ANIMALES\n3: ALIMENTAR ANIMALES\n4: SALIR\nIngrese su Opcion: ")
-    if int(numero) == 4:
+        "1: AGREGAR ANIMAL\n2: MOSTRAR ANIMALES\n3: ALIMENTAR ANIMALES\n4: VER DETALLES ANIMALES\n5: SALIR\nIngrese su Opcion: ")
+    if int(numero) == 5:
         break
 # AGREGAR ANIMALES
     elif int(numero) == 1:
@@ -44,32 +48,24 @@ while True:
             if int(num_tipo) == 1:
                 nombre = input("Ingrese el Nombre: ")
                 edad = input("Ingrese el Edad: ")
-                fel = input("Ingrese el nivel Felicidad: ")
-                sal = input("Ingrese el nivel Salud: ")
 
-                animal1 = Camello(1, nombre, edad)
+                animal1 = Camello(nombre, edad)
                 zoo1.agregar_animal(animal1)
-                animal1.alimentacion(int(fel), int(sal))
+
 
             elif int(num_tipo) == 2:
                 nombre = input("Ingrese el Nombre: ")
                 edad = input("Ingrese el Edad: ")
-                fel = input("Ingrese el nivel Felicidad: ")
-                sal = input("Ingrese el nivel Salud: ")
 
-                animal2 = Delfin(1, nombre, edad)
+                animal2 = Delfin(nombre, edad)
                 zoo1.agregar_animal(animal2)
-                animal2.alimentacion(int(fel), int(sal))
 
             elif int(num_tipo) == 3:
                 nombre = input("Ingrese el Nombre: ")
                 edad = input("Ingrese el Edad: ")
-                fel = input("Ingrese el nivel Felicidad: ")
-                sal = input("Ingrese el nivel Salud: ")
 
-                animal3 = Flamenco(1, nombre, edad)
+                animal3 = Flamenco(nombre, edad)
                 zoo1.agregar_animal(animal3)
-                animal3.alimentacion(int(fel), int(sal))
 
             else:
                 int(num_tipo) == 4
@@ -89,15 +85,16 @@ while True:
             zoo1.print_all_info()
 
             while True:
-                op = input("Ingrese Posicion del Animal(Para SALIR Ingrese -1): ")
+                op = input("Ingrese Posicion del Animal a Almimentar(Para SALIR Ingrese -1): ")
                 if int(op) >= zoo1.cantidad_animales():
                     print("""EL NUMERO INGRESADO NO ES VALIDO, PORFAVOR INTENTA CON OTRO NUMERO!!!!!!!!!!""")
                 elif int(op) == -1:
                     break           
                 else:
-                    fel = input("Ingrese el nivel Felicidad: ")
-                    sal = input("Ingrese el nivel Salud: ")
-                    zoo1.get_animal(int(op)).alimentacion(int(fel), int(sal))
-                    zoo1.get_animal(int(op)).mostrar_alimentacion()
+                    zoo1.get_animal(int(op)).alimentacion()
+#Mostrar detalles animales
+    elif int(numero) == 4:
+        zoo1.print_detail()
+        
     else:
         print("""EL NUMERO INGRESADO NO ES VALIDO, PORFAVOR INTENTA CON OTRO NUMERO!!!!!!!!!!""")
